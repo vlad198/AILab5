@@ -39,4 +39,15 @@ public class Utils {
                 return false;
         return true;
     }
+
+    public static int compareAndGetCode(List<Integer> a, List<Integer> b) {
+        if (a.size() != b.size())
+            return -1;
+
+        int nr = 0;
+        for (int i = 0; i < a.size(); i++)
+            if (Objects.equals(a.get(i), b.get(i)))
+                nr = nr + 1;
+        return nr;
+    }
 }

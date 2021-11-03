@@ -11,4 +11,8 @@ public class State {
     private List<Integer> A_colors;
     private int step;
     private int k;
+
+    public void incStep() {
+        step = step + 1;
+    }
 }
