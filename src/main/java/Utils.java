@@ -1,6 +1,4 @@
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Utils {
     public static List<Integer> generateAllBalls(int n, int m) {
@@ -49,5 +47,19 @@ public class Utils {
             if (Objects.equals(a.get(i), b.get(i)))
                 nr = nr + 1;
         return nr;
+    }
+
+    public static int numberOfAppearances(List<Integer> colors, int color) {
+        return (int) colors.stream().filter(integer -> integer == color).count();
+    }
+
+    private long factorial(int n) {
+        if (n == 0)
+            return 1;
+        return n * factorial(n - 1);
+    }
+
+    public long arrangementsCalculator(int n, int k) {
+        return factorial(n) / factorial(n - k);
     }
 }

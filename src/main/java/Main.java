@@ -4,6 +4,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Player player = new HumanPlayer();
         Problem p = new Problem(8, 4, 4);
-        p.solve(player);
+//        p.solve(player);
+//        System.out.println(p.generateAllCandidates().size());
+        p.solveMiniMax();
     }
 }
